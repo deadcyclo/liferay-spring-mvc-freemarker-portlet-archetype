@@ -7,6 +7,8 @@ portlet including a lot of examples of best practices and the best way of creati
 portlet. These best practices are influenced by both Liferays best practices, but also the best practices of
 several projects I am currently working on.
 
+Note that the setup allows one to use either JSP or Freemarker as views or a combination thereof. When looking for a view, first the system looks for a Freemarker template with the given name. If no Freemarker template is found, it goes on to look for a JSP template with the given name. If neither is found, the system fails. Hence it is possible to create portlets with a mixture of both Freemarker and JSP templates.
+
 This is the initial version of the archetype. Improvements will be added whenever possible. If you have suggestions, 
 ideas, or better practices I would be very happy to hear them, or even better receive a pull request.
 
