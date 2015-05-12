@@ -47,7 +47,7 @@ public class PortletSettingsController implements PortletConfigAware {
     @RenderMapping
     public String handleRenderRequest(RenderRequest request, Model model)  {
         if (!model.containsAttribute(FreemarkerKeys.LANGUAGEUTIL))
-            freemarkerValueUtil.addLanguageUtils(request, model);
+            freemarkerValueUtil.addLiferayUtils(request, model);
         PortletPreferences preferences = request.getPreferences();
         boolean randomSetting = Boolean.valueOf(preferences.getValue(SettingsKeys.RANDOM_SETTING, "false"));
         model.addAttribute(ParameterKeys.SETTINGS, new Settings(randomSetting));

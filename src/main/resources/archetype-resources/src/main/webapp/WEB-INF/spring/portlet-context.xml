@@ -18,6 +18,7 @@ http://www.springframework.org/schema/aop/spring-aop-2.5.xsd http://www.springfr
   <bean class="${package}.portlet.controllers.PortletController" />
   <bean class="${package}.portlet.controllers.PortletSettingsController" />
   <bean id="languageUtil" class="com.liferay.portal.kernel.language.LanguageUtil" />
+  <bean id="htmlUtil" class="com.liferay.portal.kernel.util.HtmlUtil" />
   <bean id="freemarkerValueUtil" class="${package}.common.web.freemarker.utils.FreemarkerValueUtil" />
   <bean id="jspViewResolver"
 	class="org.springframework.web.servlet.view.InternalResourceViewResolver">

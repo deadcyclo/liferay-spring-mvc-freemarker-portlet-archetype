@@ -69,7 +69,7 @@ public class PortletController implements PortletConfigAware {
     @RenderMapping
     public String handleRenderRequest(RenderRequest request, Model model) throws SystemException {
         if (!model.containsAttribute(FreemarkerKeys.LANGUAGEUTIL))
-            freemarkerValueUtil.addLanguageUtils(request, model);
+            freemarkerValueUtil.addLiferayUtils(request, model);
         /* Always use the Liferay log system. This doubles as an example of using the CustomPropsUtil to have
         portal.properties props that can be overridden in portal-ext.properties. Note that you will get an exception
         if you try to retrieve a property that doesn't exist. If you are unsure if a propertie exists, for example
@@ -92,7 +92,7 @@ public class PortletController implements PortletConfigAware {
         /* We could potentially also ensure that these three objects were stored in session rather than
         adding them in each render request */
         if (!model.containsAttribute(FreemarkerKeys.LANGUAGEUTIL))
-            freemarkerValueUtil.addLanguageUtils(request, model);
+            freemarkerValueUtil.addLiferayUtils(request, model);
         return ViewKeys.SECOND;
     }
 
